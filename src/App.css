@@ -1,38 +1,125 @@
 .App {
-  text-align: center;
+  color: rgb(30, 48, 80);
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  margin: 0;
+  padding: 0;
+  background-color: rgb(255, 255, 255);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.NavBar {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  justify-content: space-between;
+  padding: 0 1rem;
+  background-color: red;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.NavBar-right {
+  display: flex;
+  align-items: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.NavBar-right>ul {
+  display: flex;
+  list-style: none;
+  padding: 0 1rem 0 0;
+}
+
+.NavBar-right>ul>.li {
+  padding: 0 0.5rem;
+  text-decoration: none;
+}
+
+.NavBar-right>ul>.li {
+  text-decoration: none;
+  color: white;
+  transition: 0.3s;
+}
+
+.NavBar-right>ul>li>a:hover {
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.NavBar-CartWidget {
+  display: flex;
+  font-size: 1.5rem;
+}
+
+.NavBar-CartWidget>div {
+  color: white;
+  background-color: rgb(30, 48, 80);
+  border-radius: 50%;
+}
+
+.NavBar-CartWidget>* {
+  padding: 0 0.5rem;
+}
+
+.ItemListContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  min-height: 50vh;
+}
+
+.card{
+  max-width: 20rem;
+  border: solid 1px black;
+  margin: 1rem 1rem;
+  padding: 1rem;
+  background-color: white;
+}
+
+.card>img {
+  width: 100%;
+  aspect-ratio: 3/2;
+  object-fit: contain;
+}
+
+.card-price{
+  text-align: end;
+}
+
+.card-buttons{
+  display: flex;
+  align-items: center;
+  justify-content: end;
+}
+
+.card-cart{
+  display: flex;
+  justify-content: center;
+}
+
+.itemDetailContainer{
+  display: flex;
+  justify-content: center;
+}
+
+.itemDetail-card{
+  display: flex;
+  background-color: white;
+  max-width: 80rem;
+  min-height: 50vh;
+}
+
+.itemDetail-card>img {
+  width: 100%;
+  aspect-ratio: 3/2;
+  object-fit: contain;
+}
+
+.category-container{
+  display: flex;
 }
