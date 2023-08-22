@@ -1,0 +1,47 @@
+[
+    {
+        "id": 1,
+        "titulo": "ARMS - Nintendo Switch",
+        "descripcion": "Videojuego ARMS para Nintendo Switch.",
+        "categoria": "videojuego",
+        "imagen": "https://i.postimg.cc/3x94ZdfY/videojuego.png",
+        "precio": 46990,
+        "stock": 5
+    },
+    {
+        "id": 2,
+        "titulo": "Mandos para nintendo switch joycon l y r inalámbrico",
+        "descripcion": "1 x par de controladores de juego con cuerda portátil1 x cable de carga USB.",
+        "categoria": "videojuego",
+        "imagen": "https://i.postimg.cc/fTn9W40n/mando.png",
+        "precio": 50000,
+        "stock": 100
+    },
+    {
+        "id": 3,
+        "titulo": "Wolverine - Funko POP",
+        "descripcion": "Funko POP! Wolverine #637",
+        "categoria": "funko",
+        "imagen": "https://i.postimg.cc/BbDP5pkV/funko.png",
+        "precio": 16990,
+        "stock": 25
+    },
+    {
+        "id": 4,
+        "titulo": "Mouse Razer",
+        "descripcion": "Mouse marca Razer",
+        "categoria": "electronica",
+        "imagen": "https://i.postimg.cc/pXfnp0D9/mouse.png",
+        "precio": 34990,
+        "stock": 10
+    },
+    {
+        "id": 5,
+        "titulo": "Teclado Gamer",
+        "descripcion": "Teclado retroiluminado verde",
+        "categoria": "electronica",
+        "imagen": "https://i.postimg.cc/NjQ2T14d/teclado.png",
+        "precio": 10990,
+        "stock": 30
+    }
+]

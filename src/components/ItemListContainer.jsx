@@ -1,31 +1,38 @@
-import React, { useEffect, useState } from 'react';
-import ItemList from './ItemList';
+import { useEffect, useState } from "react";
+import ItemList from "./ItemList";
+import { useParams } from "react-router-dom";
+import { collection, getDocs, query, where } from "firebase/firestore";
+import { db } from "../firebase/config";
 
 const ItemListContainer = () => {
 
-  const [data, setData] = useState([]);
+    const [productos, setProductos] = useState([]);
 
-  const url = "./productos.json";
+    const [titulo, setTitulo] = useState("Productos");
 
-  const getData = async () => {
-    try {
-      const data = await fetch(url);
-      const res = await data.json();
-      setData(res);
-      return res;
-    } catch (error) {
-      console.log(error)
-    }
-  }
+    const categoria = useParams().categoria;
 
-  useEffect(() => {
-    getData()
-  }, []);
+    useEffect(() => {
 
+      const productosRef = collection(db, "productos");
+      const q = categoria ? query(productosRef, where("categoria", "==", categoria)) : productosRef;
 
+      getDocs(q)
+        .then((resp) => {
+
+          setProductos(
+            resp.docs.map((doc) => {
+              return { ...doc.data(), id: doc.id }
+            })
+          )
+        })
+        
+    }, [categoria])
+    
+    
   return (
-    <div className='ItemListContainer'>
-      <ItemList data={data}/>
+    <div>
+        <ItemList productos={productos} titulo={titulo} />
     </div>
   )
 }
